@@ -1,0 +1,27 @@
+{% load staticfiles %}   
+{% load humanize %}
+
+<!doctype html>
+<html lang ="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<title>Mi blog</title>
+</head>
+<body>
+	<div>
+		<h1>Bienvenido a mi blog! {{post.numero}}</h1>
+		<a href="/admin">admin</a>
+	</div>
+	<div id="maincontainer" align="left">
+		{% for post in posts %}
+			<div class="article">
+				<div class="posttitle">{{post.numero}}</div>
+				<div class="postauthor">publicado por {{post.author}}</div>
+				<div class="posttext">{{post.text|linebreaksbr|truncatechars:70}}</div>
+				<div class="postdate">publicado {{post.published_date|naturalday}}</div>
+			</div>
+		{% endfor %}	
+	</div>
+</body>
+</html>

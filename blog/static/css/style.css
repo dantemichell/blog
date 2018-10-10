@@ -1,0 +1,78 @@
+
+
+h1 {
+	font-family:Tahoma;
+	font-size:44px;
+	text-transform:uppercase;
+	text-align:center;
+	color:#c96706;
+
+}
+a {
+	text-decoration-line:none;
+	color:green;
+	
+}
+#maincontainer{
+	border: solid 1px gray;
+	background-image: linear-gradient(to bottom right, #c96706, yellow);
+	padding:10px;
+
+}
+
+.article {
+	background-color:white;
+	margin:15px 5px 15px 5px;
+	padding:10px;
+	width:150px;
+	height:250px;
+	position:relative;
+	border: solid 1px gray;
+	display:inline-block;
+	
+}
+
+.posttitle{
+	color:purple;
+	font-family:Century Gothic;
+	font-size:20px;
+	text-align:left;
+	border-bottom:solid 1px gray;
+	position:absolute;
+
+}
+.postauthor{
+	color:gray;
+	text-align:right;
+	font-family:Verdana;
+	font-size:13px;
+	
+}
+.posttext{
+	color:black;
+	font-family:Monospace;
+	font-size:15px;
+	text-align: justify;
+    text-justify: inter-word;
+	margin-top:20px;
+	margin-bottom:10px;
+	margin-left:0px;
+	margin-right:0px;
+	position:absolute;
+	width:76%;
+	left:0px;
+	right:0px;
+	
+	
+}
+.postdate{
+	color:gray;
+	text-align:right;
+	font-family:Verdana;
+	font-size:13px;
+	position:absolute;
+	bottom:2px;
+	right:5px;
+	
+}
+
