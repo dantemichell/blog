@@ -14,14 +14,12 @@
 		<a href="/admin">admin</a>
 	</div>
 	<div id="maincontainer" align="left">
-		{% for post in posts %}
 			<div class="article">
-				<div class="posttitle"><a href="/entry/{{post.id}}">{{post.title}}</a></div>
-				<div class="postauthor">publicado por {{post.author}}</div>
-				<div class="posttext">{{post.text|linebreaksbr|truncatechars:70}}</div>
-				<div class="postdate">publicado {{post.published_date|naturalday}}</div>
+				<div class="posttitle"><a href="/entry/{{entry.id}}">{{entry.title}}</a></div>
+				<div class="postauthor">publicado por {{entry.author}}</div>
+				<div class="posttext">{{entry.text|linebreaksbr|truncatechars:70}}</div>
+				<div class="postdate">publicado {{entry.published_date|naturalday}}</div>
 			</div>
-		{% endfor %}	
 	</div>
 </body>
 </html>

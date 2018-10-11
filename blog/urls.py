@@ -4,4 +4,5 @@ from django.utils import timezone
 
 urlpatterns = [
 	url(r'^$', views.post_list),
+	url(r'^$', views.entry),
 ]
