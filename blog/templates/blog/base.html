@@ -1,0 +1,21 @@
+{% load staticfiles humanize %}   
+<!DOCTYPE html>
+<html lang ="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div>
+		<h1>Bienvenido a mi blog!</h1>
+		<a href="/admin">admin</a>
+	</div>
+	<div id="maincontainer" align="left">
+		<div id="contentbox" align="center" width="60%">
+			{% block content %}{% endblock %}
+		</div>
+			
+	</div>
+</body>
+</html>

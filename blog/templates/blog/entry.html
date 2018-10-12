@@ -1,25 +1,14 @@
-{% load staticfiles %}   
-{% load humanize %}
+{% extends "base.html" %}
+{% load staticfiles humanize %}
+{% block title %}Mi blog - Entry{% endblock %}
+{% block content %}
+	<div class="entrybox">
+		<div class="title"><a href="/entry/{{entry.id}}">{{entry.title}}</a></div>
+		<div class="author">publicado por {{entry.author}}</div>
+		<div class="text">{{entry.text|linebreaksbr|truncatechars:70}}</div>
+		<div class="date">publicado {{entry.published_date|naturalday}}</div>
+	</div>	
+{% endblock %}
 
-<!doctype html>
-<html lang ="es">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-	<title>Mi blog</title>
-</head>
-<body>
-	<div>
-		<h1>Bienvenido a mi blog!</h1>
-		<a href="/admin">admin</a>
-	</div>
-	<div id="maincontainer" align="left">
-			<div class="article">
-				<div class="posttitle"><a href="/entry/{{entry.id}}">{{entry.title}}</a></div>
-				<div class="postauthor">publicado por {{entry.author}}</div>
-				<div class="posttext">{{entry.text|linebreaksbr|truncatechars:70}}</div>
-				<div class="postdate">publicado {{entry.published_date|naturalday}}</div>
-			</div>
-	</div>
-</body>
-</html>
+
+
