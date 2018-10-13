@@ -19,6 +19,5 @@ from blog.views import entry
 
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
-	url(r'^entry/(\d{1,2})/', entry),
 	url(r'', include('blog.urls')),
 ]

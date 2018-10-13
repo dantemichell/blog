@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from . models import Post
 from django.utils import timezone
 
@@ -7,7 +7,6 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts} )
 
 
-def entry(request, offset):
-    offset = int(offset)
-    entry = Post.objects.filter(id__lte=offset)
-    return render(request, 'blog/entry.html', {'entry': entry})
+def entry(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/entry.html', {'post': post})
